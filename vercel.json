@@ -1,0 +1,47 @@
+{
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/main.html"
+    },
+    {
+      "source": "/pair",
+      "destination": "/pair.html"
+    },
+    {
+      "source": "/react",
+      "destination": "/react.html"
+    },
+    {
+      "source": "/settings",
+      "destination": "/settings.html"
+    },
+    {
+      "source": "/admin",
+      "destination": "/admin.html"
+    },
+    {
+      "source": "/code",
+      "destination": "https://sakura-xd-frontend-53a8f812f941.herokuapp.com/code"
+    },
+    {
+      "source": "/code/:path*",
+      "destination": "https://sakura-xd-frontend-53a8f812f941.herokuapp.com/code/:path*"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    }
+  ]
+}
